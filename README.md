@@ -1,33 +1,46 @@
 # agent-skills
 
-一个用于管理自定义 agent skills 的仓库。
+A repository for managing custom agent skills.
 
-## 目录结构
+**Languages:** [中文](README.zh-CN.md)
+
+## Repository layout
 
 ```text
 .
 ├── skills/
-│   └── example-skill/
-│       └── SKILL.md
+│   ├── example-skill/SKILL.md
+│   ├── honojs/
+│   ├── init-ultra-next-stack/
+│   └── next-antd-hono-rpc/
 ├── templates/
 │   └── SKILL.template.md
 └── .gitignore
 ```
 
-## 使用方式
+## Skills in this repository
 
-1. 复制 `templates/SKILL.template.md`。
-2. 在 `skills/` 下创建一个新目录，例如 `skills/code-review/`。
-3. 将文件命名为 `SKILL.md`。
-4. 在 `SKILL.md` 里定义这个 skill 的用途、触发条件、执行步骤和输出格式。
+| Skill | Path | Summary |
+| --- | --- | --- |
+| **example-skill** | [`skills/example-skill/SKILL.md`](skills/example-skill/SKILL.md) | Minimal template: purpose, when to use, workflow, and output format—use as a starting point for new skills. |
+| **honojs** | [`skills/honojs/SKILL.md`](skills/honojs/SKILL.md) | Hono HTTP APIs with Zod validation, typed `Env`, and a routes / services split; runnable snippets under [`example/`](skills/honojs/example/). |
+| **next-antd-hono-rpc** | [`skills/next-antd-hono-rpc/SKILL.md`](skills/next-antd-hono-rpc/SKILL.md) | Next.js App Router UI with a typed Hono RPC client (`hono/client` `hc`); Ant Design–friendly patterns; examples under [`example/`](skills/next-antd-hono-rpc/example/). |
+| **init-ultra-next-stack** | [`skills/init-ultra-next-stack/SKILL.md`](skills/init-ultra-next-stack/SKILL.md) | Step-by-step scaffold: Next.js + Tailwind + shadcn/ui + Jotai + Biome + Lefthook, `pnpm` as the package manager. |
 
-## 约定
+## How to use
 
-- 一个 skill 对应一个目录。
-- skill 主文件统一命名为 `SKILL.md`。
-- 目录名建议使用 kebab-case，例如 `api-design`、`bug-triage`。
-- 如果某个 skill 需要额外资源，可以放在该目录下，例如 `examples/`、`scripts/`、`assets/`。
+1. Copy `templates/SKILL.template.md`.
+2. Create a new directory under `skills/`, for example `skills/code-review/`.
+3. Name the file `SKILL.md`.
+4. In `SKILL.md`, define the skill’s purpose, triggers, steps, and output format.
 
-## 快速开始
+## Conventions
 
-参考示例：`skills/example-skill/SKILL.md`
+- One skill maps to one directory.
+- The main skill file is always named `SKILL.md`.
+- Use kebab-case for directory names, for example `api-design`, `bug-triage`.
+- If a skill needs extra resources, place them in that directory, for example `examples/`, `scripts/`, or `assets/`.
+
+## Quick start
+
+See the example: `skills/example-skill/SKILL.md`
